@@ -1,0 +1,619 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: "Lato", sans-serif;
+}
+
+section {
+  padding: 50px 0;
+}
+
+:root {
+  --primaryColor: #ffa500;
+  --backgroundColor: #f9f9f9;
+  --blackColor: #000;
+  --whiteColor: #fff;
+}
+a {
+  text-decoration: none !important;
+}
+/* Navbar Start  */
+.fixed-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+#navbar {
+  background: var(--backgroundColor);
+  /* box-shadow: 10px 20px 5px grey; */
+}
+
+#logo {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--blackColor);
+  text-shadow: 0 1px 1px var(--blackColor);
+  margin-bottom: 5px;
+}
+
+#logo span {
+  color: var(--primaryColor);
+}
+
+.navbar-toggler span {
+  color: var(--primaryColor);
+}
+
+.navbar-nav {
+  margin-left: 20px;
+}
+
+.nav-item .nav-link {
+  color: var(--blackColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.5s ease;
+  margin: 0 2px;
+}
+
+.nav-item .nav-link:hover {
+  background: var(--primaryColor);
+  color: #fff;
+}
+
+.search-box {
+  margin: 0 0 0 auto;
+}
+
+.search-box button {
+  background: var(--primaryColor);
+  color: #fff;
+  border: none;
+  transition: 0.5s ease-in-out;
+}
+
+.search-box button:hover {
+  background-color: var(--blackColor);
+  color: var(--primaryColor);
+}
+
+/* Navbar Start  */
+
+/* Home Section Start  */
+
+.home {
+  width: 100%;
+  height: 86vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0.2)),
+    url(./images/images.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home .content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+}
+
+.home .content h5 {
+  color: var(--whiteColor);
+  font-size: 30px;
+  font-weight: 500;
+  text-shadow: 0 1px 1px var(--blackColor);
+}
+
+.home .content h1 {
+  color: var(--whiteColor);
+  font-size: 70px;
+  font-weight: 500;
+  text-shadow: 0 1px 1px var(--blackColor);
+  margin-top: 5px;
+}
+
+.home .content p {
+  color: var(--whiteColor);
+  font-size: 16px;
+  font-weight: 400;
+  text-shadow: 0 1px 1px var(--blackColor);
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+
+.changeContent::after {
+  content: " ";
+  color: var(--primaryColor);
+  text-shadow: 0 1px 1px var(--blackColor);
+  animation: changetext 10s infinite linear;
+}
+
+@keyframes changetext {
+  0% {
+    content: "India";
+  }
+
+  10% {
+    content: "France";
+  }
+
+  20% {
+    content: "United States";
+  }
+
+  30% {
+    content: "China";
+  }
+
+  40% {
+    content: "Italy";
+  }
+
+  50% {
+    content: "Bali";
+  }
+
+  60% {
+    content: "Mexico";
+  }
+
+  70% {
+    content: "Germany";
+  }
+
+  80% {
+    content: "Spain";
+  }
+
+  90% {
+    content: "United Kingdom";
+  }
+
+  100% {
+    content: "Africa";
+  }
+}
+
+.home .content a {
+  padding: 10px;
+  margin: 0 auto;
+  width: 120px;
+  font-family: "Lato", sans-serif;
+  background-color: var(--whiteColor);
+  color: var(--blackColor);
+  letter-spacing: 2px;
+  font-weight: 500px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* Home Section End  */
+
+/* Book Section Start  */
+.book {
+  background-color: var(--backgroundColor);
+  /* box-shadow: 0 1px 1px var(--blackColor); */
+}
+
+.main-text h1 {
+  text-align: center;
+  text-shadow: 0 1px 1px var(--blackColor);
+  font-weight: 600;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  margin-bottom: 50px;
+}
+
+.main-text h1 span {
+  color: var(--primaryColor);
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 5px 5px -6px var(--blackColor);
+  /* width: 100%; */
+  /* margin: 0 100px 0 0; */
+}
+
+.book .row {
+  margin-top: 30px;
+}
+
+.book form input,
+.book form textarea {
+  padding: 10px;
+  color: var(--blackColor);
+  border: none;
+  font-size: 15px;
+  border-radius: 10px;
+  outline: none;
+  margin: 10px 0;
+  box-shadow: 0 5px 5px -6px var(--blackColor);
+}
+
+.book form textarea {
+  resize: none;
+  height: 150px;
+}
+
+.book .submitBtn {
+  width: 160px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  margin-top: 10px;
+  transition: 0.5s;
+}
+.book .submitBtn:hover {
+  width: 170px;
+}
+
+.book .card {
+  height: 450px;
+  padding: 10px;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+/* .card img {
+    height: 400px;
+    width: 100%;
+} */
+
+/* Book Section End  */
+/* Packages Section Start  */
+
+/* .main-text h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    text-shadow: 0 1px 1px var(--blackColor);
+}
+
+.main-text h1 span {
+    color: var(--primaryColor);
+} */
+
+.packages .card {
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.packages .card img {
+  border-radius: 5px;
+}
+
+.packages .card .card-body {
+  background: transparent;
+}
+
+.packages .card .card-body h3 {
+  font-weight: 600;
+}
+
+.packages .card .card-body p {
+  font-size: 15px;
+}
+
+.checked {
+  color: var(--primaryColor);
+}
+
+.star i {
+  font-size: 15px;
+}
+
+.packages .card .card-body h6 {
+  font-size: 18px;
+}
+
+.packages .card .card-body a {
+  padding: 0.5rem 2rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  background: var(--primaryColor);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.detail-card .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Packages Section End  */
+
+/* Services Section Start   */
+.services {
+  background: var(--backgroundColor);
+  margin: 100px 0;
+  padding: 50px 0;
+}
+
+.services .card {
+  box-shadow: 0 4px 12px -6px rgba(0, 0, 0, 0.1);
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.services .card i {
+  font-size: 80px;
+  text-align: center;
+  color: var(--primaryColor);
+  margin-top: 20px;
+}
+
+.services .card .card-body {
+  text-align: center;
+}
+
+.services .card .card-body h3 {
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Services Section End  */
+
+/* Galllery Section Start   */
+.gallary {
+  margin: 50px 0;
+}
+
+.gallary .card {
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.gallary .card img {
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.gallary .card img:hover {
+  transform: scale(1.1);
+}
+
+/* Galllery Section End  */
+
+/* About Section Start */
+.about {
+  margin-top: 50px;
+  background-color: var(--backgroundColor);
+  margin: 50px 0;
+  padding: 20px 50px 50px 50px;
+}
+
+.about .card {
+  border-radius: 10px;
+}
+
+.about .card img {
+  border-radius: 10px;
+}
+
+.about h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.about p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#about-btn {
+  width: 150px;
+  height: 38px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  letter-spacing: 2px;
+  font-weight: 500;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#about-btn:hover {
+  width: 170px;
+}
+
+/* About Section end */
+
+/* Footer Section Start  */
+
+#footer {
+  width: 100%;
+  margin-top: 150px;
+  text-align: center;
+  background-color: var(--backgroundColor);
+}
+
+#footer h1 {
+  font-weight: 600;
+  padding-top: 30px;
+  text-shadow: 0 0 1px var(--blackColor);
+}
+
+#footer h1 span {
+  color: var(--primaryColor);
+}
+
+.social-links i {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.social-links i:hover {
+  background-color: var(--primaryColor);
+  color: var(--blackColor);
+}
+
+/* 
+/* Footer Section End  */
+
+/* scroll to top  */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primaryColor);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* scroll to top  */
+/*  ======================   Responsive css       ================================ */
+/* Extra small devices (phones, 576px and down) */
+@media only screen and (max-width: 576px) {
+  /* CSS rules specific to extra small devices go here */
+  .navbar-nav {
+    margin-left: 0px;
+  }
+
+  .nav-item .nav-link {
+    padding-inline: 10px;
+  }
+
+  .home .content {
+    padding-top: 100px;
+  }
+
+  .home .content h1 {
+    font-size: 40px;
+  }
+
+  .home .content h5 {
+    font-size: 25px;
+  }
+
+  .home .content p {
+    margin: 5px 20px 30px 20px;
+  }
+
+  /* book design  */
+  .main-text h1 {
+    font-size: 35px;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+
+  .book {
+    padding: 0;
+  }
+
+  /* footer  */
+
+  footer .row {
+    text-align: center;
+  }
+
+  .social-links {
+    margin: 0 0 10px 0;
+  }
+  section {
+    margin: 50px 0;
+    padding: 20px !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media only screen and (min-width: 576px) {
+  /* CSS rules specific to small devices go here */
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* CSS rules specific to medium devices go here */
+  .home .content {
+    padding-top: 150px;
+  }
+
+  .home .content h1 {
+    font-size: 50px;
+  }
+  .home .content h3 {
+    font-size: 25px;
+  }
+  .main-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  section#packages {
+    padding: 40px 0 0 0;
+  }
+  .services {
+    margin: 20px;
+    padding: 20px 0;
+  }
+  .services .card i {
+    font-size: 50px;
+  }
+  .service-card .card .card-body h3 {
+    font-size: 20px;
+  }
+  .about .card {
+    margin: 100px 0;
+  }
+  .about h2 {
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  /* CSS rules specific to large devices go here */
+  .nav-item .nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  /* CSS rules specific to extra large devices go here */
+  .about .card {
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+}
